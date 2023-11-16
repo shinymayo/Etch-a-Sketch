@@ -1,3 +1,9 @@
 .grid {
     border: 1px solid red;
 }
+.canvas {
+    border: 1px solid blue;
+}
+.violet {
+    border: 1px solid greenyellow;
+}

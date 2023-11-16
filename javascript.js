@@ -11,15 +11,15 @@ function createDiv() {
 function createCanvas() {
   myDivArr = [];
  
-  for (i = 0; i < 16; i++) {
+  for (i = 0; i < 256; i++) {
     myDivArr.push(createDiv());
     canvas.appendChild(myDivArr[i]);
   }
 }
 createCanvas();
 // function to activate the hover effect
-function mousePaint () {
- const gridDivs = document.querySelectorAll("#etch-a-sketch > div");
-
-
-}
+canvas.addEventListener("mouseover", function (e){
+    if (e.target.matches(".grid")) {
+        e.target.classList.add("paint");
+    }
+})

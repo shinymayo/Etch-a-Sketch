@@ -9,8 +9,11 @@
 }
 .grid {
     /* background-color: cornflowerblue; */
-    width: 150px;
+    width: 37.5px;
 }
 /* .grid:hover {
     background-color: chartreuse;
-/* }this working but not the way we need
+/* }this working but not the way we need*/
+.grid.paint {
+    background-color: dodgerblue;
+}

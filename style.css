@@ -1,9 +1,12 @@
-.grid {
-    border: 1px solid red;
-}
 .canvas {
     border: 1px solid blue;
+    height: 600px;
+    width: 600px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
 }
-.violet {
-    border: 1px solid greenyellow;
+.grid {
+    background-color: cornflowerblue;
+    width: 150px;
 }

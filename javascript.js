@@ -1,11 +1,4 @@
-const container = document.querySelector(".canvas");
-// loop to create 16 div'd canvas
-// for (i = 0; i < 16; i++) {
-//     const div = document.createElement("div");
-//     div.classList.add("grid");
-//     container.appendChild(div);
-// }
-
+// create a single div
 function createDiv() {
     const div = document.createElement("div");
     div.className = "grid";
@@ -13,6 +6,7 @@ function createDiv() {
 
     return div;
 }
+// create all 16 divs and put them inside the canvas
 function createCanvas() {
     const canvas = document.getElementById("etch-a-sketch");
     myDivArr = [];

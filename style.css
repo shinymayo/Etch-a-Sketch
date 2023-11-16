@@ -1,3 +1,4 @@
+
 .canvas {
     border: 1px solid blue;
     height: 600px;
@@ -7,6 +8,9 @@
     flex-wrap: wrap;
 }
 .grid {
-    background-color: cornflowerblue;
+    /* background-color: cornflowerblue; */
     width: 150px;
 }
+/* .grid:hover {
+    background-color: chartreuse;
+/* }this working but not the way we need

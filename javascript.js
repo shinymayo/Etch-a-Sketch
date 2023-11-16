@@ -1,23 +1,25 @@
+const canvas = document.getElementById("etch-a-sketch");
 // create a single div
 function createDiv() {
-    const div = document.createElement("div");
-    div.className = "grid";
-    div.innerText = "test";
+  const div = document.createElement("div");
+  div.className = "grid";
+  div.innerText = "test";
 
-    return div;
+  return div;
 }
 // create all 16 divs and put them inside the canvas
 function createCanvas() {
-    const canvas = document.getElementById("etch-a-sketch");
-    myDivArr = [];
-    // i = 0;
-    // numOfDivs = 16;
-
-    for (i = 0; i < 16; i++) {
-        myDivArr.push(createDiv());
-        canvas.appendChild(myDivArr[i]);
-    }
-    // myDivArr[5].className = "violet"; //this is a test
-    // myDivArr[4].innerText = "hello"; //this is a test
+  myDivArr = [];
+ 
+  for (i = 0; i < 16; i++) {
+    myDivArr.push(createDiv());
+    canvas.appendChild(myDivArr[i]);
+  }
 }
 createCanvas();
+// function to activate the hover effect
+function mousePaint () {
+ const gridDivs = document.querySelectorAll("#etch-a-sketch > div");
+
+
+}

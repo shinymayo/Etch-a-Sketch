@@ -1,5 +1,9 @@
 const canvas = document.getElementById("etch-a-sketch");
 const bigCanvas = document.querySelector(".big-canvas");
+const smallCanvas = document.querySelector(".small-canvas");
+
+bigCanvas.addEventListener("click", createBigCanvas);
+
 // create a single div
 function createDiv() {
   const div = document.createElement("div");
@@ -7,6 +11,7 @@ function createDiv() {
 
   return div;
 }
+
 // create all 16 divs and put them inside the canvas
 function createCanvas() {
   myDivArr = [];
@@ -17,18 +22,17 @@ function createCanvas() {
   }
 }
 createCanvas();
+
 // function to create a canvas with more pixels
 function createBigCanvas() {
     myDivArr=[];
-
     for (i = 0; i < 1024; i++) {
         myDivArr.push(createDiv());
         canvas.appendChild(myDivArr[i]);
     }
-    const grid = document.querySelector(".grid"); //doesnt work, how to access the div element?
-    grid.setAttribute("style", "width: 18.5px"); //doesnt work
+    bigCanvas.removeEventListener("click", createBigCanvas); // doesn't allow canvas to grow if the button is pressed more
 }
-bigCanvas.addEventListener("click", createBigCanvas);
+
 // function to activate the hover effect
 canvas.addEventListener("mouseover", function (e){
     if (e.target.matches(".grid")) {

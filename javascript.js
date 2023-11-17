@@ -3,8 +3,6 @@ const bigCanvas = document.querySelector(".big-canvas");
 const smallCanvas = document.querySelector(".small-canvas");
 const clearBtn = document.querySelector(".clear")
 
-bigCanvas.addEventListener("click", createBigCanvas);
-
 // create a single div
 function createDiv() {
   const div = document.createElement("div");
@@ -26,13 +24,15 @@ createCanvas();
 
 // function to create a canvas with more pixels
 function createBigCanvas() {
+    clear();
     myDivArr=[];
     for (i = 0; i < 1024; i++) {
         myDivArr.push(createDiv());
         canvas.appendChild(myDivArr[i]);
     }
-    bigCanvas.removeEventListener("click", createBigCanvas); // doesn't allow canvas to grow if the button is pressed more
-}
+    bigCanvas.removeEventListener("click", createBigCanvas);
+} // but previous drawing is still there
+bigCanvas.addEventListener("click", createBigCanvas);
 
 // function to activate the hover effect
 canvas.addEventListener("mouseover", function (e){
@@ -41,10 +41,14 @@ canvas.addEventListener("mouseover", function (e){
     }
 })
 // function to clear/reset the grid
+clearBtn.addEventListener("click", clear);
 function clear() {
-    clearBtn.addEventListener("click", () => {
-        canvas.childNodes.forEach((child) => 
-        child.style.backgroundColor = "white")
-    })
+    canvas.childNodes.forEach((child) => child.style.backgroundColor = "white");
 }
-clear();
+// function clear() {
+//     clearBtn.addEventListener("click", () => {
+//         canvas.childNodes.forEach((child) => 
+//         child.style.backgroundColor = "white")
+//     })
+// }
+// clear(); // but can't paint anymore

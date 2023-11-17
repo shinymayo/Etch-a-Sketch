@@ -1,4 +1,12 @@
-
+.game {
+    display: flex;
+    flex-direction: row;
+}
+.control {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
 .canvas {
     border: 1px solid blue;
     height: 600px;
@@ -8,12 +16,20 @@
     flex-wrap: wrap;
 }
 .grid {
-    /* background-color: cornflowerblue; */
     width: 37.5px;
 }
-/* .grid:hover {
-    background-color: chartreuse;
-/* }this working but not the way we need*/
 .grid.paint {
     background-color: dodgerblue;
+}
+.btn {
+    background-color: dodgerblue;
+    color: white;
+    border: 1px solid blue;
+    border-radius: 7px;
+    margin: 10px;
+    padding: 5px;
+}
+.btn:hover {
+    background-color: white;
+    color: blue;
 }

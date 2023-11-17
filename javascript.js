@@ -1,6 +1,7 @@
 const canvas = document.getElementById("etch-a-sketch");
 const bigCanvas = document.querySelector(".big-canvas");
 const smallCanvas = document.querySelector(".small-canvas");
+const clearBtn = document.querySelector(".clear")
 
 bigCanvas.addEventListener("click", createBigCanvas);
 
@@ -39,3 +40,11 @@ canvas.addEventListener("mouseover", function (e){
         e.target.classList.add("paint");
     }
 })
+// function to clear/reset the grid
+function clear() {
+    clearBtn.addEventListener("click", () => {
+        canvas.childNodes.forEach((child) => 
+        child.style.backgroundColor = "white")
+    })
+}
+clear();

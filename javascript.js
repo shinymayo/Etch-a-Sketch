@@ -1,4 +1,4 @@
-let color = "black";
+let color = "black"; // for colorDiv and setColor functions
 // to check that everything on the page is loaded
 window.addEventListener("DOMContentLoaded", () => {
   console.log("DOM loaded");
@@ -30,9 +30,9 @@ function getSize() {
   let input = prompt("What will be the size of the board?");
   let message = document.querySelector(".message");
   if(input == "") {
-    alert("Please provide a number between 2-100");
+    message.innerHTML = "Please provide a number between 2-100";
   } else if (input < 2 || input > 100) {
-    alert("The number must be between 2-100");
+    message.innerHTML = "The number must be between 2-100";
   } else {
     message.innerHTML = "Thank you. Now you can play";
     return input;
@@ -41,13 +41,18 @@ function getSize() {
 // works with event listener, paints the divs
 function colorDiv() {
   if(color == "random") {
-    this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`
+    this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 70%)`
   } else {
     this.style.backgroundColor = "black";
   }
     
 }
-// works with buttons black&random 
+// works with buttons black&random in html
 function setColor(colorChoice) {
   color = colorChoice;
+}
+// to reset the board
+function reset() {
+  let coloredDivs = document.querySelectorAll("div");
+  coloredDivs.forEach((div) => div.style.backgroundColor = "white");
 }

@@ -5,3 +5,45 @@
     border: 1px solid black;
     display: grid;
 }
+h2 {
+    text-align: center;
+}
+.message-size {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.size {
+    margin-bottom: 8px;
+    margin-left: 5px;
+    background-color: #FF666B;
+    border: 1px solid #a74244;
+    border-radius: 3px;
+    padding: 4px;
+}
+.size:hover {
+    background-color: #f98c8f;
+}
+.message {
+    margin-right: 10px;
+}
+.game {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.buttons {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+.btn {
+    margin-top: 8px;
+    background-color: #67C8FF;
+    border: 1px solid #55a1ce;
+    border-radius: 3px;
+    padding: 4px;
+}
+.btn:hover {
+    background-color: #93d4f9;
+}

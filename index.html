@@ -8,16 +8,21 @@
 </head>
 <body>
     <h2>Etch a Sketch on computer!</h2>
-    <div class="message"></div>
-    <div class="change-size">
-        <button class="size">Change size</button>
+    <div class="message-size">
+        <div class="message"></div>
+        <div class="change-size">
+            <button class="size">Change size</button>
+        </div>
     </div>
-     <div class="buttons">
-        <button onclick="setColor('black')">Black</button>
-        <button onclick="setColor('random')">Random</button>
-        <button>Clear</button>
+    <div class="game">
+        <div class="buttons">
+            <button class="btn" onclick="setColor('black')">Black</button>
+            <button class="btn" onclick="setColor('random')">Random</button>
+            <button class="btn" onclick="reset()">Clear</button>
+            <button class="btn" onclick="setColor('gradient')">Gradient</button> // how to make gradient?
+        </div>
+                <!-- canvas, inside divs with name grid -->
+        <div class="board"></div> 
     </div>
-        <!-- canvas, inside divs with name grid -->
-     <div class="board"></div> 
 </body>
 </html>

@@ -45,7 +45,6 @@ function colorDiv() {
   } else {
     this.style.backgroundColor = "black";
   }
-    
 }
 // works with buttons black&random in html
 function setColor(colorChoice) {
